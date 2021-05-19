@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Name</th>
+        <th scope="col">Sexe</th>
+        <th scope="col">Option</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let beneficiaire of BeneficiaireList"> 
+        <td>{{beneficiaire.name}}</td>
+        <td>{{beneficiaire.sexe}}</td>
+        <td>
+            <button type="button" class="btn btn-light sr-1">Edit</button>
+           <span> | </span>
+            <button type="button" class="btn btn-light sr-1">Delete</button>
+
+        </td>
+
+      </tr>
+      
+    </tbody>
+  </table>
+  
