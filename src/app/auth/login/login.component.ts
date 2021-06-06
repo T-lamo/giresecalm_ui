@@ -39,6 +39,8 @@ export class LoginComponent implements OnInit {
     }
     this.authService.login("peterson","peterson").pipe(first()).subscribe(
       data=>{
+        console.log("is logging")
+        console.log(data)
         this.router.navigate(['home'])
 
       }

@@ -2,16 +2,22 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  readonly APIUrl = "http://127.0.0.1:8000";
+  readonly APIUrl : any;
+  
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this.APIUrl=environment.apiUrl;
+
+  }
   login(username: string, password: string){
+
     return this.http.post<any>(this.APIUrl + "/auth/login/",{ username, password}).pipe(
       map(user=>{
         if(user && user.token){
