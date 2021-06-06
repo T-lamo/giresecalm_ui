@@ -8,13 +8,19 @@ import { AddEditBeneficiaireComponent } from './beneficiaire/add-edit-beneficiai
 import { ShowDeleteBeneficiaireComponent } from './beneficiaire/show-delete-beneficiaire/show-delete-beneficiaire.component';
 import { CommonService } from './common.service';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms' 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component' 
 @NgModule({
   declarations: [
     AppComponent,
     BeneficiaireComponent,
     AddEditBeneficiaireComponent,
-    ShowDeleteBeneficiaireComponent
+    ShowDeleteBeneficiaireComponent,
+    HomeComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

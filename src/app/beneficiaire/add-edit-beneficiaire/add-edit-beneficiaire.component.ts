@@ -39,23 +39,24 @@ export class AddEditBeneficiaireComponent implements OnInit {
       this.BeneficiaireList.push(val);
       console.log("data:"+data.name);
     });*/
-    this.service.login("edouard","p@$$word").pipe(first()).subscribe(
+    /*this.service.login("nathasha","nathasha").pipe(first()).subscribe(
       data=>{
         console.log(data.username);
       }
-    )
+    )*/
 
-    var val = {
-      "username": "Ronick",
-      "email": "ronick@gmail.com",
-      "password": "password",
-      "firstname": "Ronick",
-      "lastname": "Romulus"
+    /*var val = {
+      "username": "nathasha",
+      "email": "nathasha@gmail.com",
+      "password": "nathasha",
+      "firstname": "Nathasha",
+      "lastname": "Norestan"
 
     } 
-    this.service.addUser(val).subscribe(res =>{
-      alert (res.toString());
+    this.service.signup(val).subscribe(res =>{
+      console.log (res.toString());
     });
+    */
 
     
 
